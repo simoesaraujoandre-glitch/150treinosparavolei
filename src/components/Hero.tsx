@@ -27,15 +27,15 @@ export const Hero: React.FC = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-heading font-normal text-[#111827] leading-[0.95] tracking-wide mb-6 max-w-4xl mx-auto">
-            <span className="text-[#1247D6]">+150 TREINOS</span> PARA VOCÊ <span className="text-[#1247D6]">EVOLUIR</span> DENTRO E FORA DA QUADRA
+            <span className="text-[#1247D6]">+250 TREINOS</span> PARA VOCÊ <span className="text-[#1247D6]">EVOLUIR</span> DENTRO E FORA DA QUADRA
           </h1>
 
           {/* Product Mockup Centered */}
           <div className="relative w-full max-w-2xl flex justify-center mx-auto mb-6 sm:mb-8">
             <div className="relative w-full flex items-center justify-center">
               <img
-                src="/imagem/mockup.webp"
-                alt="Mockup do Material +150 Treinos para Atletas de Vôlei"
+                src="/imagem/mockup.png"
+                alt="Mockup do Material +250 Treinos para Atletas de Vôlei"
                 className="w-full h-auto max-h-[460px] sm:max-h-[500px] object-contain drop-shadow-xl transition-transform duration-300 hover:scale-[1.01]"
                 loading="eager"
                 decoding="async"

@@ -45,7 +45,7 @@ export const WhatYouGet: React.FC = () => {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-8 border-b border-[#DCE3EF]">
             <div>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-normal text-[#111827] tracking-wide">
-                +150 TREINOS DE VÔLEI
+                +250 TREINOS DE VÔLEI
               </h3>
             </div>
             <div className="text-xs sm:text-sm font-medium text-[#596273] bg-[#F8F9FB] px-3.5 py-1.5 rounded-lg border border-[#DCE3EF] self-start sm:self-auto font-body">

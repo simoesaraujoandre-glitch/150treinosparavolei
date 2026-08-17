@@ -92,7 +92,7 @@ export const FaqAndFinalCta: React.FC = () => {
           <div className="bg-white rounded-2xl border-2 border-[#1247D6] p-8 sm:p-12 md:p-14 shadow-md relative overflow-hidden">
             
             <span className="inline-block px-3 py-1 rounded-md bg-[#EAF1FF] text-[#1247D6] text-xs font-semibold uppercase tracking-wider font-body mb-4">
-              +150 TREINOS DE VÔLEI
+              +250 TREINOS DE VÔLEI
             </span>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-heading font-normal text-[#111827] leading-[0.98] tracking-wide mb-4 max-w-2xl mx-auto">
@@ -136,7 +136,7 @@ export const FaqAndFinalCta: React.FC = () => {
       <footer className="bg-[#111827] text-white/70 py-10 text-center text-xs font-body border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 space-y-2.5">
           <p className="font-heading font-normal text-white text-lg tracking-wider">
-            +150 TREINOS DE VÔLEI
+            +250 TREINOS DE VÔLEI
           </p>
           <p className="text-white/60 text-xs">
             Material digital para desenvolvimento técnico, físico e tático no voleibol.

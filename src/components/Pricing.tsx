@@ -38,7 +38,7 @@ export const Pricing: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-7">
                 <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-[#111827] font-body">
                   <Check className="w-4 h-4 text-[#1247D6] shrink-0 stroke-[2.5]" />
-                  <span>+150 Treinos de Vôlei</span>
+                  <span>+250 Treinos de Vôlei</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-[#111827] font-body">
                   <Check className="w-4 h-4 text-[#1247D6] shrink-0 stroke-[2.5]" />
@@ -119,7 +119,7 @@ export const Pricing: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
               <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-[#111827] font-body">
                 <Check className="w-3.5 h-3.5 text-[#1247D6] shrink-0 stroke-[2.5]" />
-                <span>+150 Treinos de Vôlei</span>
+                <span>+250 Treinos de Vôlei</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-[#111827] font-body">
                 <Check className="w-3.5 h-3.5 text-[#1247D6] shrink-0 stroke-[2.5]" />
