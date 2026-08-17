@@ -3,7 +3,7 @@ import { ShieldCheck } from 'lucide-react';
 
 export const Guarantee: React.FC = () => {
   return (
-    <section className="bg-[#F8F9FB] py-14 sm:py-20 md:py-24 border-b border-[#DCE3EF] relative">
+    <section className="bg-[#F8F9FB] py-10 sm:py-14 md:py-16 border-b border-[#DCE3EF] relative">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="bg-white rounded-2xl border border-[#DCE3EF] p-8 sm:p-12 shadow-xs text-center relative">
@@ -14,9 +14,6 @@ export const Guarantee: React.FC = () => {
           </div>
 
           <div>
-            <span className="text-[#1247D6] text-xs font-semibold uppercase tracking-wider bg-[#EAF1FF] border border-[#1247D6]/20 px-3 py-1 rounded-md inline-block mb-3 font-body">
-              7 DIAS DE GARANTIA INCONDICIONAL
-            </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-normal text-[#111827] leading-[0.98] tracking-wide max-w-2xl mx-auto mb-4">
               EXPERIMENTE O MATERIAL POR <span className="text-[#1247D6]">7 DIAS</span>
             </h2>

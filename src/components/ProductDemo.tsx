@@ -1,10 +1,46 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 interface TrainingImage {
   id: string;
   src: string;
   alt: string;
 }
+
+interface CarouselRowProps {
+  images: TrainingImage[];
+  direction: 'left' | 'right';
+  eager?: boolean;
+}
+
+const CarouselRow: React.FC<CarouselRowProps> = ({ images, direction, eager = false }) => {
+  const animClass = direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right';
+
+  return (
+    <div className="w-full overflow-hidden flex relative select-none">
+      <div className={`flex gap-3.5 sm:gap-4 ${animClass} whitespace-nowrap`}>
+        {[...images, ...images].map((img, idx) => (
+          <div
+            key={`${direction}-${img.id}-${idx}`}
+            className="w-56 sm:w-64 md:w-72 shrink-0 aspect-[416/600]"
+          >
+            <div className="relative w-full h-full group overflow-hidden rounded-[14px] border border-[#DCE3EF] bg-[#EAEEF6] shadow-xs transition-all duration-300 hover:border-[#1247D6]/50 hover:shadow-md">
+              <img
+                src={img.src}
+                alt={img.alt}
+                width={416}
+                height={600}
+                className="w-full h-full object-cover rounded-[13px] transition-transform duration-300 group-hover:scale-[1.02]"
+                loading={eager ? 'eager' : 'lazy'}
+                decoding="async"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export const ProductDemo: React.FC = () => {
   // Carrossel 1: 5 imagens (treinos 1 a 5)
@@ -34,91 +70,12 @@ export const ProductDemo: React.FC = () => {
     { id: 't15', src: '/treinos/treino-15.webp', alt: 'Treino de Vôlei 15' },
   ];
 
-  // Pré-carregamento imediato das imagens para ficarem disponíveis instantaneamente na memória
-  useEffect(() => {
-    const allImages = [...carousel1Images, ...carousel2Images, ...carousel3Images];
-    allImages.forEach((item) => {
-      const img = new Image();
-      img.src = item.src;
-    });
-  }, []);
-
   return (
     <section className="bg-[#F8F9FB] py-10 sm:py-14 md:py-16 overflow-hidden border-b border-[#DCE3EF]">
       <div className="flex flex-col gap-4 sm:gap-5">
-        
-        {/* Carousel 1 - Movimento em um sentido (Left) */}
-        <div className="w-full overflow-hidden flex relative select-none">
-          <div className="flex gap-3.5 sm:gap-4 animate-scroll-left whitespace-nowrap">
-            {[...carousel1Images, ...carousel1Images].map((img, idx) => (
-              <div
-                key={`c1-${img.id}-${idx}`}
-                className="w-56 sm:w-64 md:w-72 shrink-0 aspect-[416/600]"
-              >
-                <div className="relative w-full h-full group overflow-hidden rounded-[14px] border border-[#DCE3EF] bg-[#EAEEF6] shadow-xs transition-all duration-300 hover:border-[#1247D6]/50 hover:shadow-md">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    width={416}
-                    height={600}
-                    className="w-full h-full object-cover rounded-[13px] transition-transform duration-300 group-hover:scale-[1.02]"
-                    loading="eager"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Carousel 2 - Movimento no sentido contrário (Right) */}
-        <div className="w-full overflow-hidden flex relative select-none">
-          <div className="flex gap-3.5 sm:gap-4 animate-scroll-right whitespace-nowrap">
-            {[...carousel2Images, ...carousel2Images].map((img, idx) => (
-              <div
-                key={`c2-${img.id}-${idx}`}
-                className="w-56 sm:w-64 md:w-72 shrink-0 aspect-[416/600]"
-              >
-                <div className="relative w-full h-full group overflow-hidden rounded-[14px] border border-[#DCE3EF] bg-[#EAEEF6] shadow-xs transition-all duration-300 hover:border-[#1247D6]/50 hover:shadow-md">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    width={416}
-                    height={600}
-                    className="w-full h-full object-cover rounded-[13px] transition-transform duration-300 group-hover:scale-[1.02]"
-                    loading="eager"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Carousel 3 - Movimento no mesmo sentido do primeiro (Left) */}
-        <div className="w-full overflow-hidden flex relative select-none">
-          <div className="flex gap-3.5 sm:gap-4 animate-scroll-left whitespace-nowrap">
-            {[...carousel3Images, ...carousel3Images].map((img, idx) => (
-              <div
-                key={`c3-${img.id}-${idx}`}
-                className="w-56 sm:w-64 md:w-72 shrink-0 aspect-[416/600]"
-              >
-                <div className="relative w-full h-full group overflow-hidden rounded-[14px] border border-[#DCE3EF] bg-[#EAEEF6] shadow-xs transition-all duration-300 hover:border-[#1247D6]/50 hover:shadow-md">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    width={416}
-                    height={600}
-                    className="w-full h-full object-cover rounded-[13px] transition-transform duration-300 group-hover:scale-[1.02]"
-                    loading="eager"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        <CarouselRow images={carousel1Images} direction="left" eager />
+        <CarouselRow images={carousel2Images} direction="right" />
+        <CarouselRow images={carousel3Images} direction="left" />
       </div>
     </section>
   );

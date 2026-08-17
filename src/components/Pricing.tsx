@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 
 export const Pricing: React.FC = () => {
   return (
-    <section id="planos" className="bg-[#F8F9FB] py-14 sm:py-20 md:py-24 border-b border-[#DCE3EF] relative">
+    <section id="planos" className="bg-[#F8F9FB] py-10 sm:py-14 md:py-16 border-b border-[#DCE3EF] relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -83,14 +83,14 @@ export const Pricing: React.FC = () => {
                   HOJE POR APENAS
                 </p>
                 <p className="text-5xl sm:text-6xl font-heading font-normal text-[#111827] my-0.5 tracking-tight">
-                  R$34,99
+                  R$27,95
                 </p>
                 <p className="text-xs text-[#596273] font-body">Pagamento único</p>
               </div>
 
               {/* CTA Button Premium */}
               <a
-                href="#checkout-premium"
+                href="https://pay.wiapy.com/2KHOyUlkVWbb"
                 className="block w-full py-4 px-6 rounded-[10px] bg-[#1247D6] hover:bg-[#0B2F8F] text-white font-heading font-normal text-xl sm:text-2xl text-center shadow-md hover:shadow-lg transition-all active:scale-[0.99] uppercase tracking-wider"
               >
                 QUERO O PLANO PREMIUM
@@ -104,7 +104,7 @@ export const Pricing: React.FC = () => {
 
 
           {/* PLANO BÁSICO (Simpler, Secondary, Outline Button) */}
-          <div className="w-full max-w-xl bg-white rounded-2xl border border-[#DCE3EF] p-6 sm:p-8 shadow-xs relative">
+          <div className="w-full max-w-xl bg-white rounded-2xl border-2 border-[#1247D6] p-6 sm:p-8 shadow-sm relative">
             
             <div className="pb-5 mb-5 border-b border-[#DCE3EF]">
               <h3 className="text-2xl sm:text-3xl font-heading font-normal text-[#111827] tracking-wide">
@@ -148,14 +148,14 @@ export const Pricing: React.FC = () => {
                 POR APENAS
               </p>
               <p className="text-4xl sm:text-5xl font-heading font-normal text-[#111827] my-0.5 tracking-tight">
-                R$19,00
+                R$14,95
               </p>
               <p className="text-xs text-[#596273] font-body">Pagamento único</p>
             </div>
 
             {/* CTA Button Basic - Outline */}
             <a
-              href="#checkout-basico"
+              href="https://pay.wiapy.com/rCu8CCIvXfq2"
               className="block w-full py-3 px-6 rounded-[10px] border border-[#1247D6] text-[#1247D6] hover:bg-[#EAF1FF] font-heading font-normal text-lg sm:text-xl text-center transition-all uppercase tracking-wider"
             >
               QUERO O PLANO BÁSICO

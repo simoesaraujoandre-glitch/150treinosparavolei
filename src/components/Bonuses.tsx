@@ -7,23 +7,26 @@ export const Bonuses: React.FC = () => {
       title: 'PLANO DE EVOLUÇÃO 30 DIAS',
       desc: 'Organize seus treinos durante 4 semanas e tenha uma direção mais clara do que trabalhar ao longo do mês.',
       priceOld: 'R$59',
+      image: '/imagem/bonus-1.webp',
     },
     {
       badge: 'BÔNUS 02',
       title: 'ROTINA DE AQUECIMENTO PARA JOGADORES DE VÔLEI',
       desc: 'Prepare o corpo antes dos treinos de quadra ou academia com rotinas práticas de aquecimento.',
       priceOld: 'R$49',
+      image: '/imagem/bonus-2.webp',
     },
     {
       badge: 'BÔNUS 03',
       title: '50 EXERCÍCIOS EXTRAS DE VÔLEI',
       desc: 'Mais opções para variar seus treinos e trabalhar diferentes fundamentos sem ficar repetindo sempre os mesmos exercícios.',
       priceOld: 'R$39',
+      image: '/imagem/bonus-3.webp',
     },
   ];
 
   return (
-    <section className="bg-[#F8F9FB] py-14 sm:py-20 md:py-24 border-b border-[#DCE3EF] relative">
+    <section className="bg-[#F8F9FB] py-10 sm:py-14 md:py-16 border-b border-[#DCE3EF] relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -41,13 +44,26 @@ export const Bonuses: React.FC = () => {
           {bonuses.map((bonus, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-[#DCE3EF] p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:border-[#1247D6]/40 transition-all"
+              className="bg-white rounded-2xl border border-[#DCE3EF] p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:border-[#1247D6]/40 transition-all group"
             >
               <div>
-                <span className="inline-block px-2.5 py-1 rounded-md bg-[#FFF8E6] border border-[#F5B800]/40 text-[#B88700] text-xs font-bold uppercase tracking-wider font-body mb-4">
-                  {bonus.badge}
-                </span>
-                <h3 className="text-xl sm:text-2xl font-heading font-normal text-[#111827] mb-2.5 leading-snug tracking-wide">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="inline-block px-2.5 py-1 rounded-md bg-[#FFF8E6] border border-[#F5B800]/40 text-[#B88700] text-xs font-bold uppercase tracking-wider font-body">
+                    {bonus.badge}
+                  </span>
+                </div>
+
+                {/* Bonus Cover Image */}
+                <div className="w-full bg-[#F3F5F9] rounded-xl p-4 mb-5 flex items-center justify-center overflow-hidden border border-[#E5E9F2]">
+                  <img
+                    src={bonus.image}
+                    alt={bonus.title}
+                    className="w-full max-h-[220px] sm:max-h-[240px] object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-heading font-normal text-[#111827] mb-2 leading-snug tracking-wide">
                   {bonus.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-[#596273] font-body leading-relaxed mb-6">
@@ -59,7 +75,7 @@ export const Bonuses: React.FC = () => {
                 <span className="text-xs text-[#596273] font-medium font-body">
                   Valor normal <span className="line-through text-red-500 font-semibold">{bonus.priceOld}</span>
                 </span>
-                <span className="text-xs font-bold text-[#1247D6] bg-[#EAF1FF] px-2.5 py-1.5 rounded-lg inline-block uppercase font-body">
+                <span className="text-xs font-bold text-[#1247D6] bg-[#EAF1FF] px-2.5 py-1.5 rounded-lg inline-block uppercase font-body text-center">
                   HOJE GRÁTIS NO PLANO PREMIUM
                 </span>
               </div>

@@ -42,7 +42,7 @@ export const FaqAndFinalCta: React.FC = () => {
     <div className="bg-[#F8F9FB]">
       
       {/* FAQ Section */}
-      <section className="py-14 sm:py-20 md:py-24 border-b border-[#DCE3EF] relative">
+      <section className="py-10 sm:py-14 md:py-16 border-b border-[#DCE3EF] relative">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-10 sm:mb-14">
@@ -86,7 +86,7 @@ export const FaqAndFinalCta: React.FC = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-[#F8F9FB] py-14 sm:py-20 md:py-24 relative overflow-hidden">
+      <section className="bg-[#F8F9FB] py-10 sm:py-14 md:py-16 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           
           <div className="bg-white rounded-2xl border-2 border-[#1247D6] p-8 sm:p-12 md:p-14 shadow-md relative overflow-hidden">
